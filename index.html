@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>แบบทดสอบออนไลน์</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- กล่องหลักของฟอร์ม -->
+    <div class="container">
+      <h1>ข้อมูลผู้เข้าทดสอบ</h1>
+      <!-- ฟอร์มกรอกข้อมูลผู้ทดสอบ -->
+      <form id="startForm">
+        <!-- ช่องกรอก ชื่อ-นามสกุล -->
+        <label for="name">ชื่อ-นามสกุล:</label>
+        <input type="text" id="name" name="name" required />
+
+        <!-- ช่องกรอก สังกัด -->
+        <label for="company">สังกัด:</label>
+        <input type="text" id="company" name="company" required />
+
+        <!-- ช่องกรอก กลุ่ม -->
+        <label for="group">กลุ่ม:</label>
+        <input type="text" id="group" name="group" required />
+
+        <!-- ช่องเลือก วันที่สอบ -->
+        <label for="date">วันที่สอบ:</label>
+        <input type="date" id="date" name="date" required />
+
+        <!-- ปุ่มเริ่มทำข้อสอบ -->
+        <button type="submit">เริ่มทำข้อสอบ</button>
+      </form>
+    </div>
+
+    <!-- ลิงก์ไฟล์ JavaScript เพื่อจัดการเหตุการณ์และการนำทาง -->
+    <script src="./script.js"></script>
+  </body>
+</html>

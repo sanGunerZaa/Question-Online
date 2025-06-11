@@ -1,0 +1,157 @@
+/* ================================
+  Reset พื้นฐาน: ตั้งค่ารูปแบบของทุก element ให้เหมือนกันทุกเบราว์เซอร์
+  ใช้ได้ทุกหน้า HTML
+================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ================================
+  พื้นหลัง (body)
+  ใช้กับ <body> ของทุกหน้า
+================================ */
+body {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================================
+  กล่องฟอร์ม: ใช้กับ <div class="container">
+  ที่ครอบแบบฟอร์มหรือเนื้อหาแต่ละหน้า
+================================ */
+.container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ================================
+  หัวข้อในฟอร์ม: ใช้กับ <h1>
+  ส่วนหัวของแต่ละหน้า เช่น start.html และ questions.html
+================================ */
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+/* ================================
+  Label: ใช้กับ <label>
+  ใน start.html (หน้าแรก)
+================================ */
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #444;
+}
+
+/* ================================
+  Input: ใช้กับ <input type="text"> และ <input type="date">
+  ใน start.html (หน้าแรก)
+================================ */
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.3s;
+  font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+  border-color: #2575fc;
+  outline: none;
+}
+
+/* ================================
+  ปุ่มกด "เริ่มทำข้อสอบ"
+  ใช้กับ <button> ใน start.html และ questions.html
+================================ */
+button {
+  display: block; /*มาคูกันกับบรรทัดล่าง*/
+  margin: 20px auto; /* ใส่ระยะห่างบน-ล่างได้ตามต้องการ */
+  width: auto%; /* ปรับความกว้างตามข้อความ */
+  padding: 8px 16px; /* ระยะห่างด้านในของปุ่ม */
+  background: linear-gradient(to right, #6a11cb, #2575fc); /*สีพื้นหลังปุ่ม*/
+  color: white; /*สีตัวอักษรที่ปุ่ม*/
+  border: none; /*เส้นขอบไม่มี*/
+  border-radius: 6px; /* มุมโค้งมน */
+  font-size: 16px; /* ขนาดตัวอักษร */
+  cursor: pointer; /*เคอร์เซ่อเมื่อจะเปลี่ยนรูป*/
+  transition: background 0.3s; /*ความหน่วงของสีพื้นหลัง*/
+}
+
+button:hover {
+  background: linear-gradient(to right, #5a0ebd, #1e63d9);
+}
+
+/* ================================
+  Responsive: ใช้กับ .container ทุกหน้า
+  สำหรับหน้าจอเล็ก (มือถือ)
+================================ */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+}
+
+/* ================================
+  กล่องคำแนะนำ (instructions)
+  ใช้กับ <div class="instructions"> ใน questions.html
+================================ */
+.instructions {
+  margin-top: 20px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  color: #333;
+  font-size: 14px;
+}
+.instruction-title {
+  font-size: 16px; /* ปรับขนาดให้เท่ากับข้อความใน <ul> */
+  text-decoration: underline; /* ขีดเส้นใต้ */
+  margin-bottom: 0.5rem; /* เว้นระยะจากข้อความข้างล่าง */
+}
+.instructions ul {
+  padding-left: 20px;
+}
+.instructions li {
+  margin-bottom: 8px;
+}
+
+/* ================================
+  กล่องข้อสอบ (question)
+  ใช้กับ <div class="question"> ใน questions.html
+================================ */
+.question {
+  font-weight: normal;
+  margin-top: 20px;
+  padding: 20px;
+  background: #f2f2f2;
+  border-radius: 8px;
+}
+/*คำถาม*/
+.question p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+/*ตัวเลือก*/
+.question label {
+  font-weight: normal;
+  line: height 24pxpxpx; /* ระยะห่างระหว่างบรรทัด */
+}
